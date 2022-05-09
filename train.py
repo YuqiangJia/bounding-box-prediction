@@ -16,20 +16,20 @@ import utils
 
 class args():
     def __init__(self):
-        self.jaad_dataset = '/data/smailait-data/JAAD/processed_annotations' #folder containing parsed jaad annotations (used when first time loading data)
+        self.jaad_dataset = '/home/yuqiang.jia/workspace/JAAD/processed_annotations' #folder containing parsed jaad annotations (used when first time loading data)
         self.dtype        = 'train'
         self.from_file    = False #read dataset from csv file or reprocess data
         self.save         = True
-        self.file         = '/data/smailait-data/jaad_train_16_16.csv'
-        self.save_path    = '/data/smailait-data/jaad_train_16_16.csv'
-        self.model_path    = '/data/smailait-data/models/multitask_pv_lstm_trained.pkl'
+        self.file         = '/home/yuqiang.jia/workspace/bounding-box-prediction/data/jaad_train_16_16.csv'
+        self.save_path    = '/home/yuqiang.jia/workspace/bounding-box-prediction/data/jaad_train_16_16.csv'
+        self.model_path    = '/home/yuqiang.jia/workspace/bounding-box-prediction/models/multitask_pv_lstm_trained.pkl'
         self.loader_workers = 10
         self.loader_shuffle = True
         self.pin_memory     = False
         self.image_resize   = [240, 426]
         self.device         = 'cuda'
         self.batch_size     = 100
-        self.n_epochs       = 100
+        self.n_epochs       = 10000
         self.hidden_size    = 512
         self.hardtanh_limit = 100
         self.input  = 16
